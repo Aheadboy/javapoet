@@ -2,12 +2,12 @@ import java.util.Random;
 
 public class main2 {
     public static void main(String[] args) {
-        System.out.println(        AuthorCopyRight.getCopyRight("linjiejun"));
+        System.out.println(AntiThief.getCopyRight("linjiejun"));
 
     }
 }
 
-class AuthorCopyRight {
+class AntiThief {
 
     public static String getCopyRight(String authorStr) {
         int MAX = 64;
@@ -23,6 +23,7 @@ class AuthorCopyRight {
             }
         }
 //        return new String(authorAuth).substring(1, authorAuth.length - 1);
-        return new String(authorAuth);
+        String rtn = " @author " + new String(authorAuth);
+        return rtn;
     }
 }
