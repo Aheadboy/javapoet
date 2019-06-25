@@ -616,6 +616,13 @@ public final class TypeSpec {
       return this;
     }
 
+    public Builder addGetterAndSetter(){
+        if(fieldSpecs.size()>0){
+
+        }
+      return  this;
+    }
+
     public TypeSpec build() {
       checkArgument(kind != Kind.ENUM || !enumConstants.isEmpty(),
           "at least one enum constant is required for %s", name);

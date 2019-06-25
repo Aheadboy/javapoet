@@ -152,6 +152,7 @@ public final class FieldSpec {
       return addAnnotation(ClassName.get(annotation));
     }
 
+
     public Builder addModifiers(Modifier... modifiers) {
       Collections.addAll(this.modifiers, modifiers);
       return this;
