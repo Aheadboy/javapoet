@@ -21,7 +21,7 @@ final String N = "linjiejun";
 
         CodeBlock codeBlock = CodeBlock.builder().addStatement(AntiThief.getCopyRight("linjiejun")).build();
 
-        TypeSpec typeSpec = TypeSpec.classBuilder("FirstClass").addField(fieldSpec).addField(fieldSpec2).addField(fieldSpec3).addField(fieldSpec4).addField(fieldSpec5).addField(fieldSpec6).addJavadoc(codeBlock).build();
+        TypeSpec typeSpec = TypeSpec.classBuilder("FirstClass").addField(fieldSpec).addField(fieldSpec2).addField(fieldSpec3).addField(fieldSpec4).addField(fieldSpec5).addField(fieldSpec6).addJavadoc(codeBlock).addGetterAndSetter().build();
 
         //
         JavaFile javaFile = JavaFile.builder("com.newland.app", typeSpec).build();
