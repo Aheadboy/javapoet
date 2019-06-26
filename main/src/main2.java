@@ -19,11 +19,12 @@ class AntiThief {
             if (i % 2 != 0) {
                 authorAuth[i] = authorStr.charAt(j++);
             } else {
-                authorAuth[i] = (char) (rand.nextInt(MAX - MIN + 1) + MIN);
+                int rdtemp = (rand.nextInt(MAX - MIN + 1) + MIN);
+                authorAuth[i] = (char) (rdtemp == 36 ? 126 : rdtemp);
             }
         }
 //        return new String(authorAuth).substring(1, authorAuth.length - 1);
-        String rtn = " @author " + new String(authorAuth);
+        String rtn = "@author " + new String(authorAuth);
         return rtn;
     }
 }
