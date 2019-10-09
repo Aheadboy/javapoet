@@ -630,7 +630,7 @@ public final class TypeSpec {
                     String sChat = String.valueOf(ct);
                     String upedName = sChat + fileName.substring(1);
 
-                    MethodSpec mSetter = MethodSpec.methodBuilder("set" + upedName).addModifiers(Modifier.PUBLIC).addParameter(fieldSpec.type, fileName, Modifier.PUBLIC).returns(TypeName.VOID).addStatement("this.$L=$N", fileName, fileName).build();
+                    MethodSpec mSetter = MethodSpec.methodBuilder("set" + upedName).addModifiers(Modifier.PUBLIC).addParameter(fieldSpec.type, fileName).returns(TypeName.VOID).addStatement("this.$L=$N", fileName, fileName).build();
                     MethodSpec mGetter = MethodSpec.methodBuilder("get" + upedName).returns(fieldSpec.type).addModifiers(Modifier.PUBLIC).addStatement("return this.$L", fileName).build();
                     this.addMethod(mSetter).addMethod(mGetter);
                 }
